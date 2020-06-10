@@ -53,13 +53,13 @@ class Banco {
 
 $banco =  new Banco();
 
-// var_dump($banco->executar_sql("INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)",
-//   array(
-//     ":nome" => "Gustavo Leão Nogueira de Oliveira",
-//     ":email" => "gus.leaono@gmail.com",
-//     ":depoimento" => "Gostei muito da empresa. Me ajudou muito, fizeram a minha casa."
-//   )
-// ));
+var_dump($banco->executar_sql("INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)",
+  array(
+    ":nome" => "Sônia Leão Nogueira",
+    ":email" => "sonia_leao69@gmail.com",
+    ":depoimento" => "Minha casa foi reformada pela empresa, fizeram um ótimo trabalho."
+  )
+));
 
 // var_dump($banco->executar_sql("UPDATE depoimentos SET email = :email WHERE id = :id",
 //   array(
