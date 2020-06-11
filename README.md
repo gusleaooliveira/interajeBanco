@@ -1,10 +1,15 @@
-# Usando o Menipula Banco
+# Usando o Manipula Banco
 
-Para usar esse "framework" primeiramente baixe o código localizado [aqui](https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php).
+Para usar esse "framework" primeiramente baixe o código clicando [aqui](https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php).
 
 Caso esteja usando o linux e queira usar via terminal execute:
 ```bash
 wget -c https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php
+```
+
+Para executar faça a requisição do arquivo:
+```php
+  require_once('Banco.class.php');
 ```
 
 ```php
