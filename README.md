@@ -23,7 +23,12 @@ $mensagem = true;
 
 $banco =  new Banco($servidor, $banco, $usuario, $senha, $mensagem);
 ```
-
+Respectivamente, cada variável serve para:
+* `$servidor` é o servidor onde o banco está localizado.
+* `$banco` é o *banco* em que serão inseridos os *dados*.
+* `$usuario` é o *usuário* do *banco*.
+* `$senha` é a *senha* do *banco*.
+* `$mensagem` é se as *mensagens* de **sucesso** serão ou não **exibidas** (portanto use `true` ou `false`).  
 
 ```php
 $sql = "INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)";

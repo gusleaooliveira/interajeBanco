@@ -20,16 +20,28 @@ class Banco {
     $this->conectar();
   }
 
-  function mensagem($mensagem, $tipo=""){
-
+  function mensagem($mensagem, $tipo, $centralizado=false){
+    $cor = "";
+    $alinhamento = "";
+    switch (strtolower($tipo)) {
+      case "erro": $cor = "red"; break;
+      case "alerta": $cor = "yellow"; break;
+      case "sucesso": $cor = "green"; break;
+      default: $cor = "red"; break;
+    }
+    if($centralizado){ $alinhamento = "text-center"; }
+    else{ $alinhamento = "text-justify"; }
+    echo '<div class="padding-16 margin-16 card '.$cor.'">'.
+           '<p class="text-indent '.$alinhamento.'">'.$mensagem.'</p>';
+         '</div>';
   }
 
   function conectar(){
     try{
       $this->conexao =  new PDO("mysql:host=$this->host;dbname=$this->banco", $this->usuario, $this->senha);
-      if($this->mensagem){ echo "<p><strong>Conectado!</strong></p>"; }
+      if($this->mensagem){ $this->mensagem("<strong>Conectado!</strong>", "Sucesso", true); }
     }catch(PDOException $erro){
-      echo "<p class=\"text-justify text-indent\"><strong>Mensagem de erro:</strong>".$erro->getMessage()."</p>";
+      $this->mensagem("<strong>Mensagem de erro:</strong>".$erro->getMessage(), "Erro");
     }
   }
 
