@@ -25,7 +25,7 @@ class Banco {
     }
   }
 
-  function executar_sql($sql, $array_de_dados){
+  function executa_query_array($sql, $array_de_dados){
     try{
       $stmt = $this->conexao->prepare($sql);
       $stmt->execute($array_de_dados);
@@ -36,7 +36,7 @@ class Banco {
       return null;
     }
   }
-  function executar($sql, $parametro){
+  function executa_query_parametro($sql, $parametro){
     try{
       $stmt = $this->conexao->prepare($sql);
       $stmt->bindParam(":id", $parametro);
@@ -48,7 +48,7 @@ class Banco {
       return null;
     }
   }
-  function executa($sql){
+  function executa_query($sql){
     try{
       $stmt = $this->conexao->query($sql);
       echo "<p><strong>Executado!</strong></p>";
@@ -61,35 +61,6 @@ class Banco {
 
 }
 
-// $banco =  new Banco();
-
-// var_dump($banco->executar_sql("INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)",
-//   array(
-//     ":nome" => "Sônia Leão Nogueira",
-//     ":email" => "sonia_leao69@gmail.com",
-//     ":depoimento" => "Minha casa foi reformada pela empresa, fizeram um ótimo trabalho."
-//   )
-// ));
-//
-// var_dump($banco->executar_sql("INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)",
-//   array(
-//     ":nome" => "Gustavo Leão Nogueira de Oliveira",
-//     ":email" => "gus.leaono@gmail.com",
-//     ":depoimento" => "Gostei muito da empresa. Me ajudou muito, fizeram a minha casa."
-//   )
-// ));
-
-// var_dump($banco->executar_sql("UPDATE depoimentos SET email = :email WHERE id = :id",
-//   array(
-//     ":email" => "gustavo.leao.nogueira.2017@gmail.com",
-//     ":id" => 1
-//   )
-// ));
-
-// var_dump($banco->executar("DELETE FROM depoimentos WHERE id = :id",1));
-
-
-//var_dump($resp=$banco->executa("SELECT * FROM depoimentos"));
 
 
 
