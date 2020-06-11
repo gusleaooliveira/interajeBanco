@@ -1,3 +1,11 @@
+# Usando o Menipula Banco
+
+Para usar esse "framework" primeiramente baixe o código localizado [aqui](https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php).
+
+Caso esteja usando o linux e queira usar via terminal execute:
+```bash
+wget -c https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php
+```
 
 ```php
 $banco =  new Banco();
@@ -44,3 +52,11 @@ while ($linha = $resposta->fetch(PDO::FETCH_ASSOC)) {
     echo "<hr/>";
 }
 ```
+
+**Gustavo Leão Nogueira de Oliveira:**gus.leaono@gmail.com
+**Depoimento:**Gostei muito da empresa. Me ajudou muito, fizeram a minha casa.
+
+***
+
+**Sônia Leão Nogueira:**sonia_leao69@gmail.com
+**Depoimento:**Minha casa foi reformada pela empresa, fizeram um ótimo trabalho.
