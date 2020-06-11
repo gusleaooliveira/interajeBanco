@@ -63,14 +63,6 @@ class Banco {
 
 }
 
-$banco =  new Banco();
-$resposta=$banco->executa_query("SELECT * FROM depoimentos");
-
-while ($linha = $resposta->fetch(PDO::FETCH_ASSOC)) {
-    echo "<p><strong>".$linha['nome'].":</strong>".$linha['email']."</p>";
-    echo "<p><strong>Depoimento:</strong>".$linha['depoimento']."</p>";
-    echo "<hr/>";
-}
 
 
 ?>

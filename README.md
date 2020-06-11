@@ -53,10 +53,12 @@ while ($linha = $resposta->fetch(PDO::FETCH_ASSOC)) {
 }
 ```
 
-**Gustavo Leão Nogueira de Oliveira:**gus.leaono@gmail.com
-**Depoimento:**Gostei muito da empresa. Me ajudou muito, fizeram a minha casa.
+**Gustavo Leão Nogueira de Oliveira:** gus.leaono@gmail.com
+
+**Depoimento:** Gostei muito da empresa. Me ajudou muito, fizeram a minha casa.
 
 ***
 
-**Sônia Leão Nogueira:**sonia_leao69@gmail.com
-**Depoimento:**Minha casa foi reformada pela empresa, fizeram um ótimo trabalho.
+**Sônia Leão Nogueira:** sonia_leao69@gmail.com
+
+**Depoimento:** Minha casa foi reformada pela empresa, fizeram um ótimo trabalho.
