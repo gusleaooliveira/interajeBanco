@@ -61,7 +61,7 @@ class Banco {
 
 }
 
-$banco =  new Banco();
+// $banco =  new Banco();
 
 // var_dump($banco->executar_sql("INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)",
 //   array(
