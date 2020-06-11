@@ -9,12 +9,21 @@ wget -c https://gusleaooliveira.github.io/manipulaBanco/Banco.class.php
 
 Para executar faça a requisição do arquivo:
 ```php
-  require_once('Banco.class.php');
+require_once('Banco.class.php');
 ```
 
+Instancie o banco da seguinte maneira:
+
 ```php
-$banco =  new Banco();
+$servidor = "localhost";
+$banco = "api_mrconstrucoes";
+$usuario = "root";
+$senha = "";
+$mensagem = true;
+
+$banco =  new Banco($servidor, $banco, $usuario, $senha, $mensagem);
 ```
+
 
 ```php
 $sql = "INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)";

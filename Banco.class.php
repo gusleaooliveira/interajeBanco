@@ -1,3 +1,5 @@
+<link rel="stylesheet" href="https://gusleaooliveira.github.io/hcw/css/hcw.min.css">
+
 <?php
 
 class Banco {
@@ -8,7 +10,7 @@ class Banco {
   private $conexao;
   private $mensagem;
 
-  function __construct($host="localhost", $banco="api_mrconstrucoes", $usuario="root", $senha="", $mensagem=false){
+  function __construct($host="localhost", $banco="", $usuario="root", $senha="", $mensagem=false){
     $this->host = $host;
     $this->banco = $banco;
     $this->usuario = $usuario;
@@ -18,12 +20,16 @@ class Banco {
     $this->conectar();
   }
 
+  function mensagem($mensagem, $tipo=""){
+
+  }
+
   function conectar(){
     try{
       $this->conexao =  new PDO("mysql:host=$this->host;dbname=$this->banco", $this->usuario, $this->senha);
       if($this->mensagem){ echo "<p><strong>Conectado!</strong></p>"; }
     }catch(PDOException $erro){
-      echo "<p><strong>Mensagem de erro:</strong>".$erro->getMessage()."</p>";
+      echo "<p class=\"text-justify text-indent\"><strong>Mensagem de erro:</strong>".$erro->getMessage()."</p>";
     }
   }
 
