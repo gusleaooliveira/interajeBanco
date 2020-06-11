@@ -30,6 +30,11 @@ Respectivamente, cada variável serve para:
 * `$senha` é a *senha* do *banco*.
 * `$mensagem` é se as *mensagens* de **sucesso** serão ou não **exibidas** (portanto use `true` ou `false`).  
 
+Para demonstrar o que pode ser feito, vou usar o seguinte banco  de exemplo (que chamei de `api_mrconstrucoes`), com a tabela:
+
+![Imagem do banco relacional](img/banco.png)
+
+
 ```php
 $sql = "INSERT INTO depoimentos(nome, email, depoimento) VALUES (:nome, :email, :depoimento)";
 $dados = array(
@@ -39,6 +44,8 @@ $dados = array(
 );
 
 $resposta=$banco->executa_query_array($sql,$dados);
+
+
 ```
 
 ```php
